@@ -1,0 +1,115 @@
+{
+  "students": [
+    {
+      "id": "b443",
+      "name": "Douglas Melo Silva",
+      "gender": "",
+      "birthDate": "1997-09-06",
+      "cpf": "15619861783",
+      "rg": "257970194",
+      "email": "melosilvadouglas7@gmail.com",
+      "phone": "21983632055",
+      "insta": "@douglasmelo7991",
+      "password": "1234567890",
+      "payment": "Pix",
+      "categories": "6 dias",
+      "timeTraining": "1 hora",
+      "goal": "Hipertrofia",
+      "physicalData": {
+        "height": "187",
+        "weight": "88",
+        "imc": "25.17",
+        "imcError": "Sobrepeso",
+        "imcSuccess": "",
+        "bf": "15",
+        "mm": "45",
+        "chest": "112",
+        "abd": "50",
+        "fatMass": "50",
+        "leanMass": "45",
+        "relRightBiceps": "35",
+        "contRightBiceps": "41",
+        "relLeftBiceps": "35",
+        "contLeftBiceps": "41",
+        "rightLeg": "60",
+        "leftLeg": "60",
+        "metabAge": "35",
+        "viscFat": "6"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "3 dias"
+    },
+    {
+      "id": "2",
+      "name": "4 dias"
+    },
+    {
+      "id": "3",
+      "name": "5 dias"
+    },
+    {
+      "id": "4",
+      "name": "6 dias"
+    }
+  ],
+  "gender": [
+    {
+      "id": "5",
+      "name": "Masculino"
+    },
+    {
+      "id": "6",
+      "name": "Feminino"
+    }
+  ],
+  "payments": [
+    {
+      "id": "7",
+      "name": "Crédito"
+    },
+    {
+      "id": "8",
+      "name": "Débito"
+    },
+    {
+      "id": "9",
+      "name": "Pix"
+    }
+  ],
+  "time": [
+    {
+      "id": "10",
+      "name": "45 min."
+    },
+    {
+      "id": "11",
+      "name": "1 hora"
+    },
+    {
+      "id": "12",
+      "name": "1h. 30min."
+    },
+    {
+      "id": "13",
+      "name": "2 horas"
+    }
+  ],
+  "pattern": [
+    {
+      "id": "14",
+      "name": "AB"
+    },
+    {
+      "id": "15",
+      "name": "ABC"
+    },
+    {
+      "id": "16",
+      "name": "ABCD"
+    }
+  ]
+}

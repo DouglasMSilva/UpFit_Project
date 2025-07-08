@@ -1,0 +1,42 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    align-items: center;
+    height: 70px;
+    background-color: #444;
+    padding: 1rem;
+}
+
+.h1 {
+    background: royalblue;
+    color: #fff;
+    padding-right: .2rem; 
+}
+
+.span {
+    background: #222;
+    color: #fff;
+    padding-bottom: .05rem;
+}
+
+.navlist {
+    list-style: none;
+}
+
+.nav_links {
+    text-decoration: none;
+    color: #fff;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.item {
+    margin-right: 1rem;
+}
+
+.nav_links:hover {
+    color: skyblue;
+}
+
+
