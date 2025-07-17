@@ -1,0 +1,13 @@
+.h1 {
+    background: royalblue;
+    color: #fff;
+    padding-right: 1rem; 
+    text-align: center;
+   
+}
+
+.span {
+    background: #222;
+    color: #fff;
+    padding-bottom: .04rem;
+} 

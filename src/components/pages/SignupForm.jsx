@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import { Logo } from '../layout/Logo';
+
 import { useNavigate } from 'react-router-dom';
 
 import styles from './SignupForm.module.css'
@@ -69,6 +71,9 @@ export const SignupForm = () => {
   const [goal, setGoal] = useState('');
 
   const navigate = useNavigate();
+
+  const loggedInstructor = JSON.parse(localStorage.getItem('loggedInstructor')) || { name: '' };
+
 
 
   useEffect(() => {
@@ -148,6 +153,13 @@ export const SignupForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    //const loggedInstructor = JSON.parse(localStorage.getItem('loggedInstructor'));
+
+    if(!loggedInstructor) {
+      alert('Você precisa estar logado como instrutor para cadastrar um aluno.');
+      return;
+    }
+
     const isNameValid = nameValidate();
     const isBirthValid = birthDateValidate();
 
@@ -170,6 +182,8 @@ export const SignupForm = () => {
         categories: selectedCategory,
         timeTraining: selectedTimeTraining,
         goal,
+        instructorId: loggedInstructor.id,
+        instructorName: loggedInstructor.name
       };
 
       try {
@@ -234,7 +248,7 @@ export const SignupForm = () => {
 
   return (
     <>
-
+     <Logo />
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.form_header}>
           <i id={styles.ititle}><FaClipboard /></i>
@@ -371,6 +385,15 @@ export const SignupForm = () => {
               ))}
             </select>
           </div>
+
+
+          {loggedInstructor && (
+            <div className={styles.form_body}>
+              <label>Instrutor:</label>
+              <input type="text" value={loggedInstructor.name} readOnly className={styles.input_readonly}/>
+            </div>
+          )}
+
 
           <div className={styles.form_body}>
             <i className={styles.icon}><FaBullseye /></i>

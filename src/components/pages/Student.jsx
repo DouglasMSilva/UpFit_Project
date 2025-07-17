@@ -85,10 +85,11 @@ export function Student() {
             ['Categoria', student.category, 'category'],
             ['Tempo de Treino', student.timeTraining, 'timeTraining'],
             ['Objetivo', student.goal, 'goal'],
+            ['Instrutor', student.instructorName || 'Não informado', 'instructorName'],
           ].map(([label, value, field], index) => (
             <div className={styles.form_body} key={index}>
               <label>{label}:</label>
-              {isEditing ? (
+              {isEditing && field !== 'instructorName' ? (
                 <Input type='text' value={student[field] || ''} onChange={(e) => setStudent({...student, [field]: e.target.value})} />
               ) : (
                 <span className={styles.text}>{value}</span>
@@ -124,7 +125,7 @@ export function Student() {
               <div className={styles.form_body} key={index}>
                 <label>{label}:</label>
                 {isEditing ? (
-                  <Input type='text' value={student[field] || ''} onChange={(e) => setStudent({...student, [field]: e.target.value})} />
+                  <Input type='text' value={student.physicalData[field] || ''} onChange={(e) => setStudent({...student, physicalData: { ...student.physicalData, [field]: e.target.value}})} />
                 ) : ( 
                 <span className={styles.text}>{value}</span>) 
                 } 
